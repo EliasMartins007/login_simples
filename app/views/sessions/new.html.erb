@@ -1,0 +1,20 @@
+<h1>Sign In</h1>
+<h2>Login</h2>
+<%= form_with url: sign_in_path do |form| %> <!--model:@user, url: sign_in_path tenho que adicionar  22/09/2021/-->
+  <!--inicio teste mensagens-->
+    <!--necessario incluir para erros-->
+    
+  <!--fim teste -->
+  <div class= "mb-3">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control", placeholder: 'teste@teste.com' %>
+  </div>
+
+  <div class="mb-3"> 
+    <%= form.label :password %>
+    <%= form.password_field :password, class:"form-control", placeholder: 'senha' %>
+  </div>
+  <div class="mb-3">
+    <%= form.submit "Sign In", class:"btn btn-primary" %>
+  </div>
+<% end %>

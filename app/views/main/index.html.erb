@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center justify-content-center">
+ <h2>Main tela</h2>
+</div>
+
+ <!--session 21/09/2021-->
+<% if @user %>
+   Logged in as: <%= @user.email %>
+
+   <!--logout criar controller e rota-->
+   <%= button_to "Logout", logout_path, method: :delete %>
+<% end %>  
